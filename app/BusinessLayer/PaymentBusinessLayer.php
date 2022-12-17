@@ -95,6 +95,7 @@ class PaymentBusinessLayer extends GenericBusinessLayer
             'stripeSuccess' => $stripeSuccess,
             'paymentSaved' => $paymentSaved,
             'paymentEmail' => $paymentEmail,
+            'redirectUrl' => $paymentData->url,
         ];
         } catch (ThrowableUtils $e) {
             $result = $e;
@@ -145,18 +146,19 @@ class PaymentBusinessLayer extends GenericBusinessLayer
                             ->where('email', $params->getEmail())
                             ->where('phone', $params->getWhatsapp())
                             ->first();
-        if ( !$isExist ) {
-            $cust = Customer::create([
-                'name' => $params->getName(),
-                'phone' => $params->getWhatsapp(),
-                'email' => $params->getEmail(),
-                'whatsapp' => $params->getWhatsapp(),
-            ]);
-            $newCust = true;
-        } else {
-            $cust = $isExist;
-        }
+        // var_dump($isExist);
+                            // if ( !$isExist ) {
+        //     $cust = Customer::create([
+        //         'name' => $params->getName(),
+        //         'phone' => $params->getWhatsapp(),
+        //         'email' => $params->getEmail(),
+        //         'whatsapp' => $params->getWhatsapp(),
+        //     ]);
+        //     $newCust = true;
+        // } else {
+        //     $cust = $isExist;
+        // }
 
-        return $cust;
+       return $isExist;
     }
 }

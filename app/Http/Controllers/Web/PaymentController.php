@@ -23,7 +23,7 @@ class PaymentController extends Controller
         $params->setWhatsapp($request->input('whatsapp'));
         $params->setProductId($request->input('program_id'));
         $result = $this->paymentBusinessLayer->generatePayment($params);
-        var_dump($result);
+        return Redirect::to($result['redirectUrl']);
     }
 
     public function successPayment(Request $request) {
@@ -34,5 +34,15 @@ class PaymentController extends Controller
         } else {
             return Redirect::to('https://www.circularity.coach');
         }
+    }
+
+    public function testFunction(Request $request) {
+        $params = new PaymentDTO();
+        $params->setName($request->input('name'));
+        $params->setEmail($request->input('email'));
+        $params->setWhatsapp($request->input('whatsapp'));
+        $params->setProductId($request->input('program_id'));
+        $result = $this->paymentBusinessLayer->test($params);
+        var_dump($result);
     }
 }

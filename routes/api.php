@@ -19,5 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/test-payment', [PaymentController::class, 'testFunction']);
 Route::post('/make-payment', [PaymentController::class, 'generatePayment']);
 Route::get('/success-payment', [PaymentController::class, 'successPayment']);
