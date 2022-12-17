@@ -18,7 +18,6 @@ class Customer extends Model
         'email',
         'phone',
         'whatsapp',
-        'email',
     ];
 
     public function getIncrementing(): bool {

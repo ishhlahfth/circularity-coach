@@ -121,7 +121,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
                             
-                            <img src="{{ asset('assets/img/logo_maxim.png') }}" width="250" height="120" style="display: block; border: 0px;margin-bottom:50px" />
+                            <img src="{{ assets('assets/img/logo_maxim.png') }}" width="250" height="120" style="display: block; border: 0px;margin-bottom:50px" />
                             <h2 style="font-size: 32px; font-weight: 400; margin: 2;"> <b>New Customer Just Registered!</b></h2> 
                         </td>
                     </tr>
@@ -142,19 +142,19 @@
                            <p style="font-weight: 700;">Reff Code : </p>
                            <p>#{{ $details['reffCode'] }}</p>
                            <p style="font-weight: 700;">Customer Name : </p>
-                           <p>${{ $details['name'] }}</p>
+                           <p>{{ $details['name'] }}</p>
                            <p style="font-weight: 700;">Customer Email : </p>
-                           <p>${{ $details['email'] }}</p>
+                           <p>{{ $details['email'] }}</p>
                            <p style="font-weight: 700;">Customer Phone : </p>
-                           <p>${{ $details['phone'] }}</p>
+                           <p>{{ $details['phone'] }}</p>
                            <p style="font-weight: 700;">Program : </p>
                            <p>{{ $details['programName'] }}</p>
                            <p style="font-weight: 700;">Paid Amount : </p>
                            <p>${{ $details['amount'] }}</p>
                            <p style="font-weight: 700;">Paid Date : </p>
-                           <p>${{ $details['paidDate'] }}</p>
+                           <p>{{ $details['paidDate'] }} (GMT+7 Asia/Jakarta)</p>
                            <p style="font-weight: 700;">Stripe Payment Id : </p>
-                           <p>${{ $details['externalId'] }}</p>
+                           <p>{{ $details['externalId'] }}</p>
                         </td>
                     </tr>
                     <tr>

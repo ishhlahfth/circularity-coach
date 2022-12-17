@@ -121,7 +121,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
                             
-                            <img src="{{ asset('assets/img/logo_maxim.png') }}" width="250" height="120" style="display: block; border: 0px;margin-bottom:50px" />
+                            <img src="{{ assets('assets/img/logo_maxim.png') }}" width="250" height="120" style="display: block; border: 0px;margin-bottom:50px" />
                             <h2 style="font-size: 32px; font-weight: 400; margin: 2;"> <b>Complete Your Payment</b></h2> 
                         </td>
                     </tr>
@@ -146,7 +146,7 @@
                            <p style="font-weight: 700;">Amount To Pay : </p>
                            <p>${{ $details['amount'] }}</p>
                            <p style="font-weight: 700;">Expired Date : </p>
-                           <p>{{ $details['expiredDate'] }}</p>
+                           <p>{{ $details['expiredDate'] }} (GMT+7 Asia/Jakarta)</p>
                         </td>
                     </tr>
                     <tr>
