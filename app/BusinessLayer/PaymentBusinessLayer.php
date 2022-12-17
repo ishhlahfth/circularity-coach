@@ -29,7 +29,7 @@ class PaymentBusinessLayer extends GenericBusinessLayer
                             ->where('email', $params->getEmail())
                             ->where('phone', $params->getWhatsapp())
                             ->first();
-        if ( $isExist == null ) {
+        if ( $isExist == NULL ) {
             $cust = Customer::create([
                 'name' => $params->getName(),
                 'phone' => $params->getWhatsapp(),
