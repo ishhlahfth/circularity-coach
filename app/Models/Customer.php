@@ -20,10 +20,6 @@ class Customer extends Model
         'whatsapp',
     ];
 
-    public function getIncrementing(): bool {
-        return false;
-    }
-
     public static function boot() {
         parent::boot();
         self::creating(function($model) {

@@ -147,18 +147,18 @@ class PaymentBusinessLayer extends GenericBusinessLayer
                             ->where('phone', $params->getWhatsapp())
                             ->first();
         // var_dump($isExist);
-                            // if ( !$isExist ) {
-        //     $cust = Customer::create([
-        //         'name' => $params->getName(),
-        //         'phone' => $params->getWhatsapp(),
-        //         'email' => $params->getEmail(),
-        //         'whatsapp' => $params->getWhatsapp(),
-        //     ]);
-        //     $newCust = true;
-        // } else {
-        //     $cust = $isExist;
-        // }
+        if ( !$isExist ) {
+            $cust = Customer::create([
+                'name' => $params->getName(),
+                'phone' => $params->getWhatsapp(),
+                'email' => $params->getEmail(),
+                'whatsapp' => $params->getWhatsapp(),
+            ]);
+            $newCust = true;
+        } else {
+            $cust = $isExist;
+        }
 
-       return $isExist;
+       return $cust;
     }
 }

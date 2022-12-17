@@ -43,6 +43,6 @@ class PaymentController extends Controller
         $params->setWhatsapp($request->input('whatsapp'));
         $params->setProductId($request->input('program_id'));
         $result = $this->paymentBusinessLayer->test($params);
-        var_dump($result);
+        echo $result;
     }
 }
