@@ -147,7 +147,7 @@
                            <p style="font-weight: 700;">Paid Amount : </p>
                            <p>${{ $details['amount'] }}</p>
                            <p style="font-weight: 700;">Paid Date : </p>
-                           <p>{{ $details['paidDate'] }} (GMT+7 Asia/Jakarta)</p>
+                           <p>{{ $details['paidDate'] }}</p>
                         </td>
                     </tr>
         

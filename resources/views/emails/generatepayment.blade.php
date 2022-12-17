@@ -146,7 +146,7 @@
                            <p style="font-weight: 700;">Amount To Pay : </p>
                            <p>${{ $details['amount'] }}</p>
                            <p style="font-weight: 700;">Expired Date : </p>
-                           <p>{{ $details['expiredDate'] }} (GMT+7 Asia/Jakarta)</p>
+                           <p>{{ $details['expiredDate'] }}</p>
                         </td>
                     </tr>
                     <tr>
