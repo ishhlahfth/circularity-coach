@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\AssessmentController;
 use App\Http\Controllers\Web\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
