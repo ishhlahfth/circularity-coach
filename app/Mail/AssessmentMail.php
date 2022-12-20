@@ -28,6 +28,6 @@ class AssessmentMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.assessmentMail');
+        return $this->subject('A Customer Just Complete Their Payment')->markdown('emails.assessmentMail');
     }
 }
