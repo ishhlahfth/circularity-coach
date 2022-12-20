@@ -8,6 +8,10 @@ class Assessment extends Model
 {
     protected $table = 'freeassessment';
 
+    protected $fillable = [
+        'customer_id',
+    ];
+
     protected $primaryKey = 'id';
 
     public $timestamp = false;
