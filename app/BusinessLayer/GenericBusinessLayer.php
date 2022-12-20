@@ -4,6 +4,7 @@ namespace App\BusinessLayer;
 
 use App\Mail\AdminNotification;
 use App\Mail\AdminNotificationPaid;
+use App\Mail\AssessmentNotifMail;
 use App\Mail\ExpiredNotification;
 use App\Mail\GeneratePayment;
 use App\Mail\SuccessPayment;
@@ -28,6 +29,9 @@ class GenericBusinessLayer
             break;
             case 'expired-notif':
                 Mail::to($data['email'])->send(new ExpiredNotification($data));
+            break;
+            case 'assessment-mail':
+                Mail::to(env('ADMIN_EMAIL', ''))->send(new AssessmentNotifMail($data));
             break;
         }
         if (count(Mail::failures()) < 1) {
