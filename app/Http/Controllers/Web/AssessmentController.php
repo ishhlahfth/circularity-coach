@@ -21,7 +21,7 @@ class AssessmentController extends Controller
         $params->setName($request->input('name'));
         $params->setEmail($request->input('email'));
         $params->setWhatsapp($request->input('phone'));
-        $result = $this->assessmentBusinessLayer->generateAssessment($params);
+        $result = $this->assessmentBusinessLayer->generateFreeAssessment($params);
         return Redirect::to('https://www.circularity.coach/assessment');
     }
 
