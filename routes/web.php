@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\Web\PaymentController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/test',  function() {
-    return view('testView');
-});
-Route::post('/make-payment', [PaymentController::class, 'test']);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/test',  function() {
+//     return view('testView');
+// });
+// Route::post('/make-payment', [PaymentControllerx::class, 'test']);
+
+Route::get('/', [FrontController::class, 'index']);
+Route::get('/login', [FrontController::class, 'login']);
+Route::post('/request-login', [FrontController::class, 'submitLogin']);
+Route::get('/logout', [FrontController::class, 'logout']);
